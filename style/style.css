@@ -1,6 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,700;1,700&family=Oswald:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@100;300;400;700&display=swap');
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     list-style: none;
+}
+img{
+    width: 100%;
+}
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ddd;
+}
+#container{
+    max-width: 1000px;
+    min-width: 300px;
+    width: 95%;
+    margin: 0 auto;
+}
+#nav{
+    background: #86b604;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#nav::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.hamburger{
+    width: 50px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 2px;
+    padding: 10px;
+    float: right;
+    margin: 5px 5px 0 0;
+}
+.hamburger span{
+    height: 5px;
+    background: white;
+    display: block;
+    margin-bottom: 5px;
+
+}
+.hamburger span:last-child{
+    margin: 0;
+
+}
+#nav ul li{
+    border-bottom: 1px solid rgba(255,255,255,.3);
+
+}
+#nav ul li:first-child{
+    padding: 1.2rem 1rem;
+    color: rgba(255,255,255,.3);
+}
+#nav ul li a{
+    color: white;
+    padding: 1.2rem 1rem;
+    display: block;
+    text-decoration: none;
+}
+#nav #hamburger-button{
+    display: none;
+}
+#nav ul li:not(:first-child){
+    display: none;
+}
+#hamburger-button:checked ~  ul li:not(:first-child){
+    display: block;
+}
+#main{
+    margin-top: 4rem;
+
+}
+#main h1{
+    font-size: 5rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+}
+#main>img{
+    border-radius: 50%;
+    margin: 0 auto 2rem auto;
+    display: block;
+    width: 50%;
+}
+#main>p{
+    line-height: 1.7;
+    font-size: 1.2rem;
+
+}
+#main>h2{
+    padding: 2rem 0;
+    font-weight: 300;
+    font-size: 3rem;
+}
+#boxes{
+    margin-top: 2rem;
+}
+#boxes .box{
+    margin-bottom: 1rem;
+    background-color: white;
+}
+#boxes .box .box-content{
+    padding: 1rem;
+
+}
+#boxes .box .box-content>h3{
+    font-size: 1.5rem;
+}
+#boxes .box .box-content>p{
+    padding: 1.5rem 0;
+    font-size: .8rem;
+    line-height: 1.5;
+}
+#boxes .box .box-content a{
+    text-decoration: none;
+    background: #86b604;
+    color: white;
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+@media (min-width:576px)
+{
+    #boxes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+    #boxes .box{
+        margin: 0;
+    }
+    
+    #boxes::after{
+        content: '';
+        clear: both;
+        display: table;
+    }
+   
+@media (min-width:768px)
+{
+   
+
+}
+@media (min-width:992px)
+{
+    #boxes{
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+    #boxes .box{
+        margin: 0;
+    }
+
+
+}
+
 }
